@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Misterioso</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #jumpscare {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #jumpscare img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>oi kkkkkkkkkjj</h1>
+  <p>clique aki para descobrir uma coisa daora</p>
+  <button onclick="ativarJumpscare()">descobrir</button>
+
+  <div id="jumpscare">
+    <img src="https://i.ytimg.com/vi/Q0ggEj4x2M0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAYXoHIJMQU_Bn5cSANPtTalquVfQ" alt="Jumpscare">
+    <audio id="sustoAudio" src="https://www.myinstants.com/media/sounds/screamer.mp3"></audio>
+  </div>
+
+  <script>
+    function ativarJumpscare() {
+      document.getElementById("jumpscare").style.display = "flex";
+      const audio = document.getElementById("sustoAudio");
+      audio.play();
+    }
+  </script>
+</body>
+</html>
